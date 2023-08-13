@@ -11,7 +11,10 @@ public class CourseRetrievalService {
     private static final String PS_URI = "https://app.pluralsight.com/profile/data/author/%s/all-content";
 
     // newHttpClient class is available and has good default values
-    private static final HttpClient CLIENT = HttpClient.newHttpClient();
+    private static final HttpClient CLIENT = HttpClient
+        .newBuilder()
+        .followRedirects(HttpClient.Redirect.ALWAYS)
+        .build();
 
     // private HttpResponse<String> response;
 
@@ -26,7 +29,12 @@ public class CourseRetrievalService {
         // ofString() is an available Body Handler        
         try {
             HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
-            return response.body();
+            return switch (response.statusCode()) {
+                case 200 -> response.body();                    
+                case 404 -> "";            
+                default -> throw new RuntimeException(
+                    "Pluralsight API call failed with status code " + response.statusCode());
+            };
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException("Could not call Pluralsight API", e);
         }
