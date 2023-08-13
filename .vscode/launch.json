@@ -5,7 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            
-        }
+            "type": "java",
+            "name": "CourseRetriever",
+            "request": "launch",
+            "mainClass": "com.soma.app.cli.CourseRetriever",
+            "args": "sander-mak",
+            "projectName": "my-app"
+        },
+        {}
     ]
 }
