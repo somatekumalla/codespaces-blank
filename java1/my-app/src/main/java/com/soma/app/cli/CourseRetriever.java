@@ -3,6 +3,8 @@ package com.soma.app.cli;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.soma.app.cli.service.CourseRetrievalService;
+
 public class CourseRetriever {
 
     private static final Logger LOG = LoggerFactory.getLogger(CourseRetriever.class);
@@ -25,6 +27,10 @@ public class CourseRetriever {
 
     private static void retrieveCourses(String authorId) {
         LOG.info("Retrieving courses for author '{}'", authorId);
+        CourseRetrievalService courseRetrievalService = new CourseRetrievalService();
+        
+        String coursesToStore = courseRetrievalService.getCoursesFor(authorId);
+        LOG.info("Retrieved the following courses {}", coursesToStore);
         }
         
 }
