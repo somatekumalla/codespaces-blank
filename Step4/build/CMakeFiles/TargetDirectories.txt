@@ -1,0 +1,14 @@
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/Tutorial.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/edit_cache.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/rebuild_cache.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/list_install_components.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/install.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/install/local.dir
+/workspaces/codespaces-blank/Step4/build/CMakeFiles/install/strip.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/MathFunctions.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/edit_cache.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/rebuild_cache.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/list_install_components.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/install.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/install/local.dir
+/workspaces/codespaces-blank/Step4/build/MathFunctions/CMakeFiles/install/strip.dir
