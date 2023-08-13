@@ -1,8 +1,23 @@
+- [Introduction](#Introduction)
+    - [Getting Started](#getting-started)
+    - [Install Maven](#install-maven)
+    - [Verify Maven Installed](#verify-maven-is-installed-and-working)
+- [Maven in 5  Minutes](#maven-in-5-minutes)
+    - [Creating a Project](#creating-a-project)
+    - [Creating a Project - Output](#creating-a-project---output)
+    - [Directory Structure](#directory-structure)
+    - [The POM](#the-pom)
+    - [Build](#build)
+    - [Run the app](#run-the-app)
+- [Update the app](#update-the-app)
+    - [Build Updated App](#build-updated-app)
+    - [Run Updated App](#run-updated-app)
+
 # Introduction 
 
 aug12a_githubCodespaces.txt
 
-## >> Getting Started 
+## Getting Started 
 
 ### >>> Quickstart for Codespaces 
 
@@ -277,7 +292,42 @@ pom.xml  src  target
 Hello World!
 ```
 
+# Update the app
 
+## build updated app 
+
+- Navigate to /workspaces/codespaces-blank/java1/my-app
+- build command : "mvn package" Note : pom.xml must be in this folder
+- run the app -
+
+```bash
+java -cp target/my-app-1.0-SNAPSHOT.jar com.soma.app.cli.CourseRetriever
+Note : main(..) function is in CourseRetriever.java 
+```
+
+
+
+update pom.xml
+build : mvn package 
+```bash
+@somatekumalla ➜ /workspaces/codespaces-blank/java1/my-app (soma-java-course01) $ mvn package
+[INFO] Scanning for projects...
+..
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+..
+@somatekumalla ➜ /workspaces/codespaces-blank/java1/my-app (soma-java-course01) $ 
+
+```
+
+## run updated app
+
+```bash
+@somatekumalla ➜ /workspaces/codespaces-blank/java1/my-app (soma-java-course01) $ ls
+pom.xml  src  target
+@somatekumalla ➜ /workspaces/codespaces-blank/java1/my-app (soma-java-course01) $ java -cp target/my-app-1.0-SNAPSHOT.jar com.soma.app.cli.CourseRetriever
+CourseRetriever started
+```
 
 
 
