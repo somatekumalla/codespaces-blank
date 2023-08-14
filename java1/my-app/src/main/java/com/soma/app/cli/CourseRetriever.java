@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.soma.app.cli.service.CourseRetrievalService;
+import com.soma.app.cli.service.PluralsightCourse;
 
 public class CourseRetriever {
 
@@ -17,7 +18,21 @@ public class CourseRetriever {
         }
 
         try {
-            retrieveCourses(args[0]);
+            // retrieveCourses(args[0]);
+            PluralsightCourse course = new PluralsightCourse("id", 
+                "title", "08:54:57", "https://url", false);
+            // methods available automatically 
+            // course.id();
+            // course.contentUrl();
+            // course.duration();
+            // course.isRetired();
+            // course.title();
+            LOG.info("Course : {}", course); 
+
+            // retrieveCourses(course.id());
+
+
+
         } catch (Exception e) {
             LOG.error("Unexpected error.", e);
             // e.printStackTrace();
