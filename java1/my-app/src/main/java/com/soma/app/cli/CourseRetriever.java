@@ -20,16 +20,16 @@ public class CourseRetriever {
         }
 
         try {
-            // retrieveCourses(args[0]);
-            PluralsightCourse course = new PluralsightCourse("id", 
-                "title", "08:54:57", "https://url", false);
+            retrieveCourses(args[0]);
+            // PluralsightCourse course = new PluralsightCourse("id", 
+            //     "title", "08:54:57", "https://url", false);
             // methods available automatically 
             // course.id();
             // course.contentUrl();
             // course.duration();
             // course.isRetired();
             // course.title();
-            LOG.info("Course : {}", course); 
+            // LOG.info("Course : {}", course); 
 
             // retrieveCourses(course.id());
 
@@ -47,7 +47,7 @@ public class CourseRetriever {
         CourseRetrievalService courseRetrievalService = new CourseRetrievalService();
         
         List<PluralsightCourse> coursesToStore = courseRetrievalService.getCoursesFor(authorId);
-        LOG.info("Retrieved the following courses {}", coursesToStore);
+        LOG.info("Retrieved the following {} courses {}", coursesToStore.size(), coursesToStore);
         }
         
 }
