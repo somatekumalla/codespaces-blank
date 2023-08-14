@@ -5,6 +5,7 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.util.List;
 
 public class CourseRetrievalService {
 
@@ -18,7 +19,7 @@ public class CourseRetrievalService {
 
     // private HttpResponse<String> response;
 
-    public String getCoursesFor(String authorId) {
+    public List<PluralsightCourse> getCoursesFor(String authorId) {
                               
         String formatted = PS_URI.formatted(authorId);        
 
@@ -30,8 +31,8 @@ public class CourseRetrievalService {
         try {
             HttpResponse<String> response = CLIENT.send(request, HttpResponse.BodyHandlers.ofString());
             return switch (response.statusCode()) {
-                case 200 -> response.body();                    
-                case 404 -> "";            
+                case 200 -> null;                    
+                case 404 -> List.of();            
                 default -> throw new RuntimeException(
                     "Pluralsight API call failed with status code " + response.statusCode());
             };
