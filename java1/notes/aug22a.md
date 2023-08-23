@@ -41,6 +41,7 @@ Click on green colored button "<> Code".
 ### VS Code : launch.json
 
 See launch.json, configuration with "name" : "CourseRetriever"
+``` 
 {
     "version": "0.2.0",
     "configurations": [
@@ -55,6 +56,8 @@ See launch.json, configuration with "name" : "CourseRetriever"
         {}
     ]
 }
+```
+
 
 click on icon "Run and Debug" in VS Code
 Select "CourseRetriever" from dropdown with label "RUN AND DEBUG"

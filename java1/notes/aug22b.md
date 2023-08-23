@@ -3,11 +3,10 @@ aug22b_pluralsight.txt
 ## Writing the first Unit Test
 
 ### Example 
+```java
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import example.util.Calculator;
-
 import org.junit.jupiter.api.Test;
 
 class MyFirstJUnitJupiterTests {
@@ -18,13 +17,18 @@ class MyFirstJUnitJupiterTests {
     void addition() {
         assertEquals(2, calculator.add(1, 1));
     }
-
 }
 
-### Parameterize tests 
-create parameterized tests in code 
-
 ```
+
+
+### Parameterize tests 
+
+1. create parameterized tests in code
+2. run unit tests from maven
+3. command : mvn clean test
+
+```bash
 
 run "mvn clean test"
 @somatekumalla ➜ /workspaces/codespaces-blank/java1/my-app (soma-java-course01) $ mvn clean test
