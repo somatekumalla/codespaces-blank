@@ -8,6 +8,15 @@
   <artifactId>my-app</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <!-- used when you have multiple modules  -->
+  <packaging>pom</packaging> 
+  
+  
+  <modules>
+    <module>course-info-cli</module>
+    <module>course-info-repository</module>
+  </modules>
+
   <name>my-app</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
@@ -15,11 +24,13 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.release>17</maven.compiler.release>
-    <slf4j.version>2.0.7</slf4j.version>
-    <jackson.version>2.15.2</jackson.version>
+    <!-- move version info properties to course-info-cli pom.xml -->
+    <!-- <slf4j.version>2.0.7</slf4j.version>
+    <jackson.version>2.15.2</jackson.version> -->
   </properties>
 
-  <dependencies>
+  <!-- moved dependencies to course-info-cli module pom.xml file -->
+  <!-- <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -59,7 +70,7 @@
         <scope>test</scope>
     </dependency>
 
-  </dependencies>
+  </dependencies> -->
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

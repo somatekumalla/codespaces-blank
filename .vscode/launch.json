@@ -10,7 +10,8 @@
             "request": "launch",
             "mainClass": "com.soma.app.cli.CourseRetriever",
             "args": "sander-mak",
-            "projectName": "my-app"
+            // Set project-name to maven artifactId            
+            "projectName": "course-info-cli"
         },
         {}
     ]

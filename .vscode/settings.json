@@ -1,4 +1,5 @@
 {
-    "java.configuration.updateBuildConfiguration": "interactive",
-    "cmake.sourceDirectory": "/workspaces/codespaces-blank/java1/my-app"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "cmake.sourceDirectory": "/workspaces/codespaces-blank/java1/my-app",
+    "maven.view": "hierarchical"
 }
