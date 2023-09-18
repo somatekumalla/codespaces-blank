@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "cmake.sourceDirectory": "/workspaces/codespaces-blank/java1/my-app",
+    "maven.view": "hierarchical"
+}
